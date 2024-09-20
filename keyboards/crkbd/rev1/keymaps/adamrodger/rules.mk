@@ -1,0 +1,12 @@
+SPLIT_KEYBOARD = yes
+VIA_ENABLE = yes
+
+# RGB settings
+RGBLIGHT_ENABLE = no
+RGB_MATRIX_ENABLE = yes
+
+# features
+CAPS_WORD_ENABLE = yes
+MOUSEKEY_ENABLE = no
+OLED_ENABLE = no
+UNICODE_ENABLE = no
