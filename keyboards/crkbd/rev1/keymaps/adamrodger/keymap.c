@@ -22,15 +22,36 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // use UK ISO layout instead of US ANSI
 #include <keymap_uk.h>
 
+// thumb key mods
 #define SFT_SPC LSFT_T(KC_SPC)
 #define SFT_ENT LSFT_T(KC_ENT)
+
+// home row mods
+#define M_GUI_A GUI_T(KC_A)
+#define M_GUI_C GUI_T(KC_C)
+#define M_GUI_SCL GUI_T(KC_SCLN)
+
+#define M_ALT_S ALT_T(KC_S)
+#define M_ALT_L ALT_T(KC_L)
+#define M_ALT_R ALT_T(KC_R)
+#define M_ALT_I ALT_T(KC_I)
+
+#define M_CTL_D CTL_T(KC_D)
+#define M_CTL_K CTL_T(KC_K)
+#define M_CTL_S CTL_T(KC_S)
+#define M_CTL_E CTL_T(KC_E)
+
+#define M_SFT_F SFT_T(KC_F)
+#define M_SFT_J SFT_T(KC_J)
+#define M_SFT_T SFT_T(KC_T)
+#define M_SFT_N SFT_T(KC_N)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+      KC_LSFT, M_GUI_A, M_ALT_S, M_CTL_D, M_SFT_F,    KC_G,                         KC_H, M_SFT_J, M_CTL_K, M_ALT_L, M_GUI_SCL, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -42,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______,    KC_W,    KC_L,    KC_Y,    KC_P,    KC_B,                         KC_Z,    KC_F,    KC_O,    KC_U, KC_SCLN, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______,    KC_C,    KC_R,    KC_S,    KC_T,    KC_G,                         KC_M,    KC_N,    KC_E,    KC_I,    KC_A, _______,
+      _______, M_GUI_C, M_ALT_R, M_CTL_S, M_SFT_T,    KC_G,                         KC_M, M_SFT_N, M_CTL_E, M_ALT_I, M_GUI_A, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______,    KC_Q,    KC_J,    KC_V,    KC_D,    KC_K,                         KC_X,    KC_H, _______, _______, _______, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
