@@ -22,10 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // use UK ISO layout instead of US ANSI
 #include <keymap_uk.h>
 
-// thumb key mods
-#define SFT_SPC LSFT_T(KC_SPC)
-#define SFT_ENT LSFT_T(KC_ENT)
-
 // home row mods
 #define M_GUI_A GUI_T(KC_A)
 #define M_GUI_C GUI_T(KC_C)
@@ -55,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(2), SFT_SPC,    SFT_ENT,   MO(3), KC_BSPC
+                                          KC_LGUI,   MO(2),  KC_SPC,    KC_ENT,   MO(3), KC_BSPC
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -101,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
         DF(1), KC_MINS, KC_LALT, KC_LCTL, KC_LSFT, KC_PLUS,                       KC_INS, KC_HOME,   KC_UP,  KC_END, KC_PGUP,  KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        DF(5), XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX,                       KC_DEL, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, CW_TOGG,
+        DF(5), KC_VOLD, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                       KC_DEL, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, CW_TOGG,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______, _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
