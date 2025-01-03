@@ -21,6 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#define VIAL_KEYBOARD_UID {0x72, 0xD1, 0xB2, 0x31, 0x83, 0x84, 0x13, 0xDE}
+
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
 /* Select hand configuration */
