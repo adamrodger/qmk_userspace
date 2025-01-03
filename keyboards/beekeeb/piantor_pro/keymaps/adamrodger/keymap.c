@@ -42,6 +42,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define M_SFT_T SFT_T(KC_T)
 #define M_SFT_N SFT_T(KC_N)
 
+#define VS_BACK C(KC_MINS)
+#define VS_FWD  C(S(KC_MINS))
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -57,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LPRN,    KC_7,    KC_8,    KC_9, KC_RPRN, KC_BSPC,
+      _______, XXXXXXX, XXXXXXX, VS_BACK,  VS_FWD, XXXXXXX,                      KC_LPRN,    KC_7,    KC_8,    KC_9, KC_RPRN, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, C(KC_A), C(KC_S), XXXXXXX, C(KC_F), XXXXXXX,                      KC_PPLS,    KC_4,    KC_5,    KC_6, KC_PMNS,  KC_DOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -83,9 +86,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_MINS, KC_LALT, KC_LCTL, KC_LSFT, KC_PLUS,                       KC_INS, KC_HOME,   KC_UP,  KC_END, KC_PGUP,  KC_F12,
+      CW_TOGG, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                       KC_INS, KC_HOME,   KC_UP,  KC_END, KC_PGUP,  KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        DF(4), KC_VOLD, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                       KC_DEL, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, CW_TOGG,
+        DF(4), KC_VOLD, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                       KC_DEL, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______, _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
