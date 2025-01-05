@@ -1,7 +1,6 @@
 SPLIT_KEYBOARD = yes
 VIA_ENABLE = yes
 VIAL_ENABLE = yes
-VIAL_INSECURE = yes
 
 # features
 CAPS_WORD_ENABLE = yes
