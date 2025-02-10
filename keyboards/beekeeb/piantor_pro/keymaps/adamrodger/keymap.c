@@ -74,9 +74,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______,   UK_AT, KC_LABK, KC_RABK, KC_UNDS,  UK_PND,                      KC_COLN, KC_LCBR, KC_RCBR, UK_BSLS,  KC_GRV, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_EXLM, KC_MINS, KC_SLSH,  KC_EQL,  UK_DLR,                      KC_AMPR, KC_LPRN, KC_RPRN, UK_DQUO, UK_TILD, KC_QUOT,
+      _______, KC_EXLM, KC_MINS, KC_PPLS,  KC_EQL,  UK_DLR,                      KC_AMPR, KC_LPRN, KC_RPRN, UK_DQUO, UK_TILD, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, UK_HASH, KC_PPLS, KC_PAST, KC_PERC, UK_EURO,                      UK_PIPE, KC_LBRC, KC_RBRC, KC_CIRC, KC_QUES, _______,
+      _______, UK_HASH, KC_SLSH, KC_PAST, KC_PERC, UK_EURO,                      UK_PIPE, KC_LBRC, KC_RBRC, KC_CIRC, KC_QUES, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______,   MO(3), _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
