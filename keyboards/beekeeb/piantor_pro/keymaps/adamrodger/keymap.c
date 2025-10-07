@@ -42,14 +42,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define M_SFT_T SFT_T(KC_T)
 #define M_SFT_N SFT_T(KC_N)
 
-// back and forward in Visual Studio
-#define VS_BACK C(KC_MINS)
-#define VS_FWD  C(S(KC_MINS))
-
-// back and forward in VS Code
-#define CD_BACK A(KC_LEFT)
-#define CD_FWD  A(KC_RIGHT)
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -65,9 +57,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      _______, XXXXXXX, XXXXXXX, VS_BACK,  VS_FWD, XXXXXXX,                      KC_LPRN,    KC_7,    KC_8,    KC_9, KC_RPRN, KC_BSPC,
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LPRN,    KC_7,    KC_8,    KC_9, KC_RPRN, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, XXXXXXX, XXXXXXX, CD_BACK,  CD_FWD, XXXXXXX,                      KC_PPLS,    KC_4,    KC_5,    KC_6, KC_PMNS,  KC_DOT,
+      _______, XXXXXXX, XXXXXXX, KC_WBAK, KC_WFWD, XXXXXXX,                      KC_PPLS,    KC_4,    KC_5,    KC_6, KC_PMNS,  KC_DOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), XXXXXXX,                      KC_PAST,    KC_1,    KC_2,    KC_3, KC_PSLS, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
