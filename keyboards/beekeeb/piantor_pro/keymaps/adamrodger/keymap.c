@@ -42,6 +42,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define M_SFT_T SFT_T(KC_T)
 #define M_SFT_N SFT_T(KC_N)
 
+// Macros
+enum custom_keycodes {
+    VIM_WQ = SAFE_RANGE,
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case VIM_WQ:
+            if (record->event.pressed) {
+                // Sends ESC, then :wq, then Enter to exit Vim
+                SEND_STRING(SS_TAP(X_ESC) ":wq" SS_TAP(X_ENTER));
+            }
+            return false;
+    }
+    return true;
+}
+// End Macros
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -57,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LPRN,    KC_7,    KC_8,    KC_9, KC_RPRN, KC_BSPC,
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  VIM_WQ,                      KC_LPRN,    KC_7,    KC_8,    KC_9, KC_RPRN, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, XXXXXXX, XXXXXXX, KC_WBAK, KC_WFWD, XXXXXXX,                      KC_PPLS,    KC_4,    KC_5,    KC_6, KC_PMNS,  KC_DOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
